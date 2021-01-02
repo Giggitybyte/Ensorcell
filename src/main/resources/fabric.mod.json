@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "ensorcell",
+  "version": "${version}",
+
+  "name": "Ensorcell",
+  "description": "Balanced and configurable enchantments for Minecraft.",
+
+  "authors": [
+    "Luke Triano (thegiggitybyte)"
+  ],
+  "contact": {
+    "discord": "https://discord.gg/UPKuVWgU4G",
+    "sources": "https://github.com/Giggitybyte/Ensorcell"
+  },
+
+  "license": "GNU GPL v3",
+  "icon": "assets/ensorcell/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.thegiggitybyte.ensorcell.Ensorcell"
+    ]
+  },
+  "mixins": [
+    "ensorcell.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": ">=1.16.2",
+    "fabricloader": ">=0.7.4",
+    "fabric": "*"
+  }
+}

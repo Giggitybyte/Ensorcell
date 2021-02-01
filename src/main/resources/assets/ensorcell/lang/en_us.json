@@ -1,0 +1,14 @@
+{
+  "enchantment.ensorcell.temporal": "Temporal",
+  "enchantment.ensorcell.ascension": "Ascension",
+  "enchantment.ensorcell.absorption": "Absorption",
+  "enchantment.ensorcell.desperation": "Desperation",
+
+  "text.autoconfig.ensorcell.title": "Ensorcell Enchantment Configuration",
+
+  "text.autoconfig.ensorcell.option.temporalEnabled": "Temporal Enchantment Enabled?",
+  "text.autoconfig.ensorcell.option.temporalItemsInvuln": "Temporal Items Indestructible?",
+
+  "text.autoconfig.ensorcell.option.ascensionEnabled": "Ascension Enchantment Enabled?",
+  "text.autoconfig.ensorcell.option.ascensionUseTeleport": "Should Ascension Teleport Players?"
+}

@@ -21,6 +21,9 @@
   "entrypoints": {
     "main": [
       "me.thegiggitybyte.ensorcell.Ensorcell"
+    ],
+    "modmenu": [
+      "me.thegiggitybyte.ensorcell.Configuration"
     ]
   },
   "mixins": [

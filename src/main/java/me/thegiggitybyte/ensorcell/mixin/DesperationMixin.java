@@ -23,21 +23,21 @@ public abstract class DesperationMixin extends Entity {
         super(type, world);
     }
     
-    // TODO: Improve this.
     @Inject(method = "damage", at = @At("HEAD"), cancellable = true)
     public void applyExtraDamage(DamageSource source, float damage, CallbackInfoReturnable<Boolean> cir) {
         if (!(source.getAttacker() instanceof PlayerEntity)) return;
         
         PlayerEntity player = (PlayerEntity) source.getAttacker();
-        float playerHealth = player.getHealth();
+        float currentHealth = player.getHealth();
+        float maximumHealth = player.getMaxHealth();
         
-        if (playerHealth > 19.0f) return;
+        if (currentHealth > (maximumHealth - 1)) return;
         
         for (ItemStack stack : player.getItemsHand()) {
             if (!Ensorcell.isEnchantPresent(stack, Ensorcell.Enchantments.DESPERATION)) continue;
             
             double level = EnchantmentHelper.getLevel(Ensorcell.Enchantments.DESPERATION, stack);
-            double scaledPercentage = ((level * 11) / 100) * ((player.getMaxHealth() - playerHealth) / 20);
+            double scaledPercentage = ((level * 15) * ((maximumHealth - currentHealth) / maximumHealth)) / 100;
             float extraDamage = (float) (damage * scaledPercentage);
             
             this.damage(DamageSource.MAGIC, damage + extraDamage);
